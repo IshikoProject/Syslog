@@ -1,0 +1,18 @@
+ishikotestframeworkpath = envvar("ISHIKO_TESTFRAMEWORK");
+import $(ishikotestframeworkpath)/Include/Ishiko/TestFramework/TestFrameworkCore.bkl;
+
+toolsets = vs2015 vs2013;
+
+vs2015.solutionfile = ../VC14/IshikoSyslogClientTests.sln;
+vs2013.solutionfile = ../VC12/IshikoSyslogClientTests.sln;
+
+
+program IshikoSyslogClientTests : IshikoTestFrameworkCore
+{
+    archs = x86 x86_64;
+
+    sources
+    {
+        ../../Source/main.cpp
+    }
+}
