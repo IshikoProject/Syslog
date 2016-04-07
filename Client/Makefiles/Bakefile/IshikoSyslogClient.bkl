@@ -1,0 +1,18 @@
+toolsets = vs2015 vs2013;
+
+vs2015.solutionfile = ../VC14/IshikoSyslogClient.sln;
+vs2013.solutionfile = ../VC12/IshikoSyslogClient.sln;
+
+program IshikoSyslogClient
+{
+    archs = x86 x86_64;
+
+    headers
+    {
+        ../../Include/Ishiko/Syslog/Client/SyslogClient.h
+    }
+    sources
+    {
+        ../../Source/SyslogClient.cpp
+    }
+}
